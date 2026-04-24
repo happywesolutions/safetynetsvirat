@@ -80,10 +80,10 @@
   });
 })();
 const images = [
-  "images/hero-balcony.jpg",
-  "images/gallery-balcony-net.jpg",
-  "images/gallery-invisible-grill.jpg",
-  "images/gallery-pool-net.jpg"
+  "images/terrace-invisible-grills.png",
+  "images/staircase-invisible-grills.png",
+  "images/pigeon-nets21.jpeg",
+  "images/duct-area-nets13.jpeg",
 ];
 
 let index = 0;
