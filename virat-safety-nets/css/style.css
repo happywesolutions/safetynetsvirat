@@ -971,3 +971,88 @@ a { text-decoration: none; transition: all .25s ease; }
   .svc-feature-list { grid-template-columns: 1fr; }
   .spec-card { position: static; margin-top: 1.5rem; }
 }
+
+.logo-img {
+  height: 55px;
+  width: auto;
+}
+
+.footer-logo-img {
+  height: 95px;
+  width: auto;
+}
+
+/* ===== FLOAT BUTTONS ===== */
+
+.float-call,
+.float-wa,
+.float-mail {
+  position: fixed;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  z-index: 999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+/* Individual positions */
+.float-call {
+  bottom: 160px;
+  background: #007bff;
+}
+
+.float-wa {
+  bottom: 90px;
+  background: #25d366;
+}
+
+.float-mail {
+  bottom: 20px;
+  background: #ff5722;
+}
+
+/* Hover effect */
+.float-call:hover,
+.float-wa:hover,
+.float-mail:hover {
+  transform: scale(1.12);
+}
+
+/* Icon alignment fix */
+.float-call i,
+.float-wa i,
+.float-mail i {
+  line-height: 1;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .float-call,
+  .float-wa,
+  .float-mail {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    right: 15px;
+  }
+
+  .float-call { bottom: 140px; }
+  .float-wa { bottom: 80px; }
+  .float-mail { bottom: 20px; }
+}
+.float-wa {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
