@@ -79,3 +79,30 @@
     if (ok) { ok.classList.remove('d-none'); setTimeout(() => ok.classList.add('d-none'), 5000); }
   });
 })();
+const images = [
+  "images/hero-balcony.jpg",
+  "images/gallery-balcony-net.jpg",
+  "images/gallery-invisible-grill.jpg",
+  "images/gallery-pool-net.jpg"
+];
+
+let index = 0;
+
+function changeHeroBg() {
+  const heroBefore = document.querySelector(".hero");
+
+  heroBefore.style.setProperty(
+    "--bg",
+    `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${images[index]}')`
+  );
+
+  heroBefore.style.backgroundImage =
+    `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${images[index]}')`;
+
+  index = (index + 1) % images.length;
+}
+
+setInterval(changeHeroBg, 3000);
+
+// initial load
+changeHeroBg();
