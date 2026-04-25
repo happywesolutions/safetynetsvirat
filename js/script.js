@@ -89,20 +89,16 @@ const images = [
 let index = 0;
 
 function changeHeroBg() {
-  const heroBefore = document.querySelector(".hero");
+  const hero = document.querySelector(".hero");
 
-  heroBefore.style.setProperty(
-    "--bg",
-    `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${images[index]}')`
-  );
-
-  heroBefore.style.backgroundImage =
+  hero.style.backgroundImage =
     `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('${images[index]}')`;
 
   index = (index + 1) % images.length;
 }
 
-setInterval(changeHeroBg, 3000);
+// slower & smooth
+setInterval(changeHeroBg, 5000);
 
 // initial load
 changeHeroBg();
