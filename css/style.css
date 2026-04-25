@@ -183,11 +183,20 @@ a { text-decoration: none; transition: all .25s ease; }
 
 /* ---------- Hero ---------- */
 .hero {
-  height: 100vh;
+  min-height: 100vh;   /* better than fixed height */
   display: flex;
-  align-items: center;   /* vertical center */
-  justify-content: flex-start; /* keep left alignment */
-  padding: 0 80px;       /* spacing from left */
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 80px;
+}
+
+/* ✅ MOBILE FIX */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;      /* remove forced height */
+    padding: 100px 20px 40px;  /* top spacing for navbar */
+    text-align: left;
+  }
 }
 .hero::before {
   content: '';
