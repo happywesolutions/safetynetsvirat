@@ -197,6 +197,14 @@ a { text-decoration: none; transition: all .25s ease; }
     padding: 100px 20px 40px;  /* top spacing for navbar */
     text-align: left;
   }
+   .hero h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
 }
 .hero::before {
   content: '';
